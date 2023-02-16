@@ -99,6 +99,19 @@ inviteEmployee2("Hello", "How are you?"); // Hello Patrick Whalen, How are you?
 
 */
 
-/* ------------------------ [ CALL APPLY BIND ] ------------------------ */
+/* ------------------------ [ COMMON JSON PROPERTIES ] ------------------------ */
 
+const myJson = '{"mode": "studying", "isHelpful": true}';
+const myObj = JSON.parse(myJson);
+console.log(myObj.mode);
+console.log(myObj.isHelpful);
+
+const myPlan = {
+    school: "coding practice",
+    extracurr: ["paint", "draw", "write", "study Russian"],
+    future: ["get job by May 2023", "look into grad school"]
+}
+
+console.log(`This is myPlan object, not stringified: ${myPlan}`);
+console.log(`This is myPlan object, but stringified: ${JSON.stringify(myPlan)}`);
 

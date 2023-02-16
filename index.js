@@ -101,6 +101,7 @@ inviteEmployee2("Hello", "How are you?"); // Hello Patrick Whalen, How are you?
 
 /* ------------------------ [ COMMON JSON PROPERTIES ] ------------------------ */
 
+/*
 const myJson = '{"mode": "studying", "isHelpful": true}';
 const myObj = JSON.parse(myJson);
 console.log(myObj.mode);
@@ -114,4 +115,145 @@ const myPlan = {
 
 console.log(`This is myPlan object, not stringified: ${myPlan}`);
 console.log(`This is myPlan object, but stringified: ${JSON.stringify(myPlan)}`);
+*/
+
+
+/* ------------------------ [ ARRAY PRACTICE ] ------------------------ */
+/*
+var myArray = [];
+
+// PUSH
+myArray.push("this", "is", "my", "practice", "array", ",", "duh");
+console.log(myArray);
+
+// SPLICE(start index, howManyToRemove, newItemA, newItemB, ..., newItemN)
+const mySpliceArray1 = myArray.splice(2,1); //  ['this', 'is', 'practice', 'array', ',', 'duh' ]
+// returns the word that was removed
+console.log(`remove 'my': ${mySpliceArray1}`);
+console.log(`report the array: ${myArray}`);
+console.log(`report the array, but in array format: ${JSON.stringify(myArray)}`);
+
+// removes the word 'practice' and adds words 'a', and 'new' to the array
+const mySpliceArray2 = myArray.splice(2,1,"a", "new");
+// returns the word that was removed
+console.log(`remove 'practice': ${mySpliceArray2}`);
+console.log(`report the array: ${JSON.stringify(myArray)}`);
+
+*/
+/*
+//splice
+var array=[1,2,3,4,5];
+console.log(array.splice(2));
+
+//slice
+var array2=[1,2,3,4,5]
+console.log(array2.slice(2));
+
+console.log("----the consequences-----");
+console.log(`This is who I am after SPLICE!: ${array}`);
+console.log(`I am unchanged by SLICE!: ${array2}`);
+
+*/
+
+/*
+// CONCAT => arr1.concat(arr2, arr3);
+
+const arr1 = ["first"];
+const arr2 = ["second"];
+const arr3 = ["third"];
+
+const finalArr = arr1.concat(arr2, arr3);
+console.log(finalArr)
+*/
+
+// FILTER
+
+// function that .filter() will use in the following code to return ages > 18
+/*
+let canVote = (age) => {
+    console.log(age)
+    return age >= 18;
+}
+const arrayAge = [18, 20, 88, 54, 3, 19, 17];
+// imposes a filter on the arrayAge array
+// Filters all items that meet the canVote requirement (>=18) and stores in the filterAgeAray
+var filterAgeArray = arrayAge.filter(canVote);
+
+console.log(`These are acceptable voting ages: ${JSON.stringify(filterAgeArray)}`);
+
+// compares ages of those <18 
+let minors = (age) => {
+    console.log(age < 18);
+    return age < 18;
+}
+// finds the first item that meets the requirements in minors function (<18)
+var findFirstMinor = arrayAge.find(minors);
+console.log(`This is the age of the first person in our arrayAge under the age of 18: ${JSON.stringify(findFirstMinor)}`);
+// findIndex finds the element that meets the requirement
+var findFirstMinorIndex = arrayAge.findIndex(minors);
+console.log(`This is the index of the first person in our arrayAge under the age of 18: ${JSON.stringify(findFirstMinorIndex)}`);
+
+
+// FOR EACH DOES NOT RETURN A NEW ARRAY!!!!!
+var newAgeArray = [];
+var nextCensusAges = arrayAge.forEach((age) => {
+    // console.log(age);
+    newAgeArray.push(age+10);
+    return -1;
+});
+console.log(typeof newAgeArray);
+console.log(`These are the ages of the group in the next census: ${newAgeArray}`);
+
+// MAP RETURNS A NEW ARRAY
+var myMapAgeArray = [];
+var mapCensusAges = arrayAge.map((age) => {
+    return age+10;
+});
+console.log(`These are the ages of the group in the next census using MAP: ${mapCensusAges}`);
+*/
+
+/*
+// POP removes last element
+// returns the element removed
+var popArray = [1, 3, 5, 7, 8];
+console.log(popArray.pop());
+console.log(popArray);
+
+// sorts in alphabetical and numerical order
+// reverses alphabetical and numerical order
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+console.log(fruits.sort());
+console.log(fruits.reverse());
+*/
+
+
+/* ------------------------ [ COMPARE OBJECT TO MAP] ------------------------ */
+
+
+/* ------------------------ [ LAMDA AKA ARROW FUNCTIONS] ------------------------ */
+
+
+/* ------------------------ [ FIRST ORDER FUNCTIONS] ------------------------ */
+
+
+/* ------------------------ [ HIGHER ORDER FUNCTIONS] ------------------------ */
+
+
+/* ------------------------ [ UNARY FUNCTIONS] ------------------------ */
+
+
+/* ------------------------ [ CURRYING FUNCTIONS] ------------------------ */
+
+
+/* ------------------------ [ KEYWORD: LET ] ------------------------ */
+
+
+/* ------------------------ [ LET VS VAR: WHEN AND WHY] ------------------------ */
+
+
+/* ------------------------ [ SWITCHBLOCK ] ------------------------ */
+
+
+
+
 

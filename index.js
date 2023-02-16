@@ -1,5 +1,6 @@
 /* ------------------------ [ CREATING OBJECTS ] ------------------------ */
 
+/*
 // Object constructor (not recommended)
 var myConstructObject = new Object("Chloe", 28, "student", "hopeless");
 
@@ -24,6 +25,7 @@ console.log(myCreateObect);                     // [Object: null prototype] {}
 console.log(myLiteralObject.description);       // [Function: description]
 console.log(myLiteralObject.description());     // This is Chloe. She is 28, currently a(n) student. Right now she's feeling down, but not out.
 
+*/
 
 /* ------------------------ [ PROTOTYPE CHAINING ] ------------------------ */
 
@@ -31,6 +33,7 @@ console.log(myLiteralObject.description());     // This is Chloe. She is 28, cur
 
 // boss -> employee -> person -> object.prototype ->
 
+/*
 const boss = {
     experience: 10,
     __proto__: {
@@ -64,4 +67,38 @@ console.log(`The proto? ${JSON.stringify(boss.__proto__)}`);
 console.log(`Boss's genus: ${boss.genus}`);
 console.log(`Is the boss human? ${boss.isHuman}`);
 console.log(`But...is the boss alive? ${boss.isAlive}`);
+*/
+
+
+/* ------------------------ [ CALL APPLY BIND ] ------------------------ */
+
+/*
+var employee1 = { firstName: "Gary", lastName: "Bradley" };
+var employee2 = { firstName: "Patrick", lastName: "Whalen" };
+
+function invite(greeting1, greeting2) {
+  console.log(
+    // this refers to the global scope. It allows us to call a value within an object instead of creating multiple variables.
+    greeting1 + " " + this.firstName + " " + this.lastName + ", " + greeting2
+  );
+}
+
+// Call: The call() method invokes a function with a given this value and arguments provided one by one
+invite.call(employee1, "Hello", "How are you?"); // Hello Gary Bradley, How are you?
+invite.call(employee2, "Hello", "How are you?"); // Hello Patrick Whalen, How are you?
+
+// Apply: Invokes the function with a given this value and allows you to pass in arguments as an array
+invite.apply(employee1, ["Hello", "How are you?"]); // Hello Gary Bradley, How are you?
+invite.apply(employee2, ["Hello", "How are you?"]); // Hello Patrick Whalen, How are you?
+
+// bind: returns a new function, allowing you to pass any number of arguments
+var inviteEmployee1 = invite.bind(employee1);
+var inviteEmployee2 = invite.bind(employee2);
+inviteEmployee1("Hello", "How are you?"); // Hello Gary Bradley, How are you?
+inviteEmployee2("Hello", "How are you?"); // Hello Patrick Whalen, How are you?
+
+*/
+
+/* ------------------------ [ CALL APPLY BIND ] ------------------------ */
+
 
